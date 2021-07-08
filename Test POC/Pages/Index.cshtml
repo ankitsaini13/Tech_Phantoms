@@ -1,0 +1,108 @@
+﻿@page
+@model IndexModel
+@{
+    //    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center" style="float:left">
+    
+    <textarea id="TextArea1" rows="2" cols="20"></textarea>
+    <input id="Button1" type="button" value="button" onclick="call_api();"/>
+    <div class="w3-content" style="padding:30px;border:3px solid #f1f1f1" id="chat">
+        <div class="chatcontainer">
+            <img src="~/Img/Chat1.png" alt="Avatar" class="left">
+            <p>Hello. How are you today?</p>
+            <span class="time-right">11:00</span>
+        </div>
+
+        <div class="chatcontainer darker">
+            <img src="~/Img/chat2.png" alt="Avatar" class="right">
+            <p>Hey! I'm fine. Thanks for asking!</p>
+            <span class="time-left">11:01</span>
+        </div>
+
+        <div class="chatcontainer">
+            <img src="~/Img/Chat1.png" alt="Avatar" class="left">
+            <p>Sweet! So, what do you wanna do today?</p>
+            <span class="time-right">11:02</span>
+        </div>
+
+        <div class="chatcontainer darker">
+            <img src="~/Img/chat2.png" alt="Avatar" class="right">
+            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+            <span class="time-left">11:05</span>
+        </div>
+        <div class="chatcontainer">
+            <img src="~/Img/Chat1.png" alt="Avatar" class="left">
+            <p>Sweet! So, what do you wanna do today?</p>
+            <span class="time-right">11:02</span>
+        </div>
+
+        <div class="chatcontainer darker">
+            <img src="~/Img/chat2.png" alt="Avatar" class="right">
+            <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+            <span class="time-left">11:05</span>
+        </div>
+    </div>
+    
+</div>
+<div id="chart2" style="float:right;right:100px">
+    <div data-v-365c20ab="" class="chart-view" style="height: 400px; width: 350px;">
+        <canvas id="chartjs-5" class="chartjs" width="400" height="400" style="height: 385px; width: 470px;"></canvas>
+    </div>
+    <div data-v-365c20ab="" class="chart-view" style="height: 400px; width: 350px;">
+        <canvas id="chartjs-6" class="chartjs" width="962" height="481" style="display: block; height: 385px; width: 770px;"></canvas>
+    </div>
+</div>
+
+
+<!--<div id="chart"></div>-->
+
+@section Scripts
+{
+   <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+            ['Sadness', 0.6165],
+            ['Analytical', 0.829888]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Tone Analyzer',
+                       'width':600,
+                       'height':500};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.LineChart(document.getElementById('chart'));
+        chart.draw(data, options);
+      }
+    </script>-->
+
+    
+        
+        
+    <script>
+        call_api();
+        //graph1();
+        graph2();
+    </script >
+        
+
+}
